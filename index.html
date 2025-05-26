@@ -1,0 +1,68 @@
+<!-- Some initial writing and debugging support was assisted by AI (ChatGPT).
+// All final decisions, code, and reflections are my own. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Apology Accepted</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: black;
+      color: white;
+      font-family: sans-serif;
+    }
+    canvas {
+      position: absolute;
+      top: 0; left: 0;
+    }
+    #message {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.5rem;
+      z-index: 2;
+      background: rgba(0,0,0,0.6);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="shape-buttons">
+  <button class="shape circle" data-tooltip="Draw with your mouse to create chaos"></button>
+  <button class="shape triangle" data-tooltip="Scream to unleash audio-reactive destruction"></button>
+  <button class="shape square" data-tooltip="Click and drag to scatter text fragments"></button>
+
+  <!-- Horizontal divider -->
+  <div class="button-divider"></div>
+  
+  <!-- Star apology button -->
+  <button class="shape star" data-tooltip="Bow your head to seek digital forgiveness"></button>
+  </div>
+
+  <div id="message">Swipe to change your stress</div>
+
+  <!-- MediaPipe libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+  
+  <!-- p5.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+  
+  <!-- Your scripts in correct order -->
+  <script src="destruction.js"></script>
+  <script src="squareEffect.js"></script>
+  <script src="triangleEffect.js"></script>
+  <script src="bowApology.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
